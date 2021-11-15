@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload</title>
+  </head>
+  <body>
+    <h1>Upload</h1>
+    <form method="post" action="{% url 'upload:uploads' %}" enctype='multipart/form-data'>
+      {% csrf_token %}
+      <!-- <input type="text" class="text" name="filename"> -->
+      <input type="file" name="files" value="" multiple><br>
+      <button type="submit">Upload Files</button>
+      <br><br><br><br>
+      <button><a href="/list">List of Files</a></button>
+      
+      
+    </form>
+  </body>
+    
+</html>
+ 
